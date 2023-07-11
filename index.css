@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+/* 	background: url(./mm.jpg); */
+	background-size: cover;
+    text-align: center;
+    color: #eee;
+    height: 100vh;
+	
+}
+
+video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 110vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+}
+
+body::after {
+    content: "";
+    background: rgba(0,0,0,0.25);
+    position: absolute;  
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+	/* 将伪元素的堆叠顺序设置为负数，使其位于父元素的下方 */
+}
+
+
+audio {
+    width: 500px;
+    margin-top: 60px;
+}
+
+.container {
+    margin-top: 100px;
+    height: 600px;
+    overflow: hidden;
+}
+
+.lrc-list {
+    transition: .3s;
+}
+
+.lrc-list li{
+	font-size: 25px;
+    height: 30px;
+    line-height: 30px;
+    transition: .3s;
+	color:white;
+}
+
+.lrc-list li.active {
+    transform: scale(1.5);
+    color:pink;
+}
+
